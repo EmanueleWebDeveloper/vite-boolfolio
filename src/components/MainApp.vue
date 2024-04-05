@@ -46,7 +46,9 @@ export default {
   <main>
     <h2>qui stampo i projects</h2>
 
-    <ProjectCard class="my-3" v-for="(element, index) in arrayProjects" :key="element.id" :title="element.title" :content="element.content" :type="element.type.name" :technologies="element.technologies"/>
+    <ProjectCard class="my-3" v-for="(element, index) in arrayProjects" :key="element.id" :title="element.title" :content="element.content"  :technologies="element.technologies" />
+    <!-- :src="'http://127.0.0.1:8000/storage/' + this.element['preview'] -->
+    <!-- :type="element.type" -->
 
 
 <!-- 
