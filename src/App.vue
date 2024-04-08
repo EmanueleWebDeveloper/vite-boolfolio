@@ -1,32 +1,38 @@
 <script>
-import MainApp from './components/MainApp.vue'
+// import MainApp from './components/MainApp.vue'
 
-export default{
+import HeaderApp from './components/HeaderApp.vue'
+
+export default {
   components: {
-    MainApp
+    HeaderApp
   },
   data() {
-    return{
-
+    return {
 
     }
   },
   methods: {
-    
+
   },
   mounted() {
-    
-  },
+  }
 }
 
 </script>
 
 <template>
-  <h1>ciao a tutti</h1>
+  <!-- <h1>Ciao dal Frontend di Boolpress</h1> -->
 
-  <mainApp />
+  <!-- <MainApp /> -->
+
+  <!-- componenti fissi che vengono visualizzati per tutte le pagine -->
+  <!-- header -->
+  <HeaderApp/>
+  <!-- inserisce in modo dinamico il contenuto delle pagine -->
+  <router-view></router-view>
+
+
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
