@@ -24,7 +24,7 @@ export default {
 <template>
   <!-- <h1>Ciao dal Frontend di Boolpress</h1> -->
 
-  <!-- <MainApp /> -->
+   <!-- <MainApp/> -->
 
   <!-- componenti fissi che vengono visualizzati per tutte le pagine -->
   <!-- header -->

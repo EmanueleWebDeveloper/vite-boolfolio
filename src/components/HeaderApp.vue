@@ -2,7 +2,7 @@
 
 export default {
     name: 'HeaderApp',
-    components:{
+    components: {
 
     },
     methods: {
@@ -27,6 +27,7 @@ export default {
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
+
                         <li>
                             <router-link :to="{ name: 'home' }" class="nav-link">
                                 Home
@@ -34,8 +35,8 @@ export default {
                         </li>
                         <li>
                             <router-link :to="{ name: 'blog' }" class="nav-link">
-                            All Projects
-                        </router-link>
+                                All Projects
+                            </router-link>
                         </li>
 
                     </div>

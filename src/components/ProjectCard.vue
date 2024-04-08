@@ -14,13 +14,12 @@ export default {
 
 <div class="card py-2" style="width: 35rem;">
     <div class="d-flex justify-content-center">
+        <img class="card-img-top" :src=' `http://localhost:8000/storage/${image}` ' alt="card_image">
         <div class="card-body my-3">
             <h3 class="card-title text-center fw-bold py-3">{{ title }}</h3>
             <p class="card-text text-center py-2"> <strong>Descrizione:</strong> {{ content }}</p>
             <p class="card-text text-center py-2"> <strong>Tipologia:</strong> {{ type }}</p>
-            <!-- <img :src="previewUrl" alt=""> -->
             
-            <!-- <p class="card-text text-center py-2" v-for="(element,index) in technologies" :key="index"> <strong>Linguaggi/Framework:</strong> {{ element.name }}</p> -->
         </div>
     </div>
 </div>

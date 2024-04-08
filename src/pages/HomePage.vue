@@ -1,6 +1,7 @@
 <script>
 
 export default {
+  name: 'HomePage',
   components: {
 
   },
@@ -19,7 +20,7 @@ export default {
 </script>
 
 <template>
-    <h1>Qui va la Home</h1>
+<h2>ciao</h2>
 </template>
 
 <style scoped></style>
