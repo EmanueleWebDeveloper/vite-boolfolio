@@ -30,7 +30,7 @@ export default {
   <!-- header -->
   <HeaderApp/>
   <!-- inserisce in modo dinamico il contenuto delle pagine -->
-  <router-view></router-view>
+  <router-view/>
 
 
 </template>

@@ -18,7 +18,7 @@ export default {
     getSingleProject(){
             axios.get(`${store.apiBaseUrl}/api/test/${this.$route.params.slug}`)
             .then (res=> {
-                console.log(res)
+                // console.log(res)
                 if(res.data.success){
                     this.project = res.data.project
                 } else {
