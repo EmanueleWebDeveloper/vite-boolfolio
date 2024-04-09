@@ -10,7 +10,7 @@ export default {
     <router-link :to="{ name: 'single-project', params: { slug: slug } }">
 
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" :src='`http://localhost:8000/storage/${image}`' alt="card_image">
+            <img class="card-img-top" :src='image' alt="card_image">
             <div class="card-body">
                 <h5 class="card-title">{{ title }}</h5>
                
