@@ -45,26 +45,18 @@ export default {
 
   <main>
     <h2>qui stampo i projects</h2>
+    
+<div>
 
-
-    <!-- <ul>
-      <li v-for=" (element, index) in arrayProjects" :key="element.id">
-
-        <router-link :to="{ name: 'single-post', params: { slug: element.slug } }">
-          {{ element.title }}
-        </router-link>
-
-      </li>
-    </ul>
-    -->
-    <ProjectCard v-for="(element, index) in arrayProjects" 
-      :key="element.id"
-      :title="element.title"
-      :slug="element.slug"
-      :content="element.content"
-      :type="element.type ? element.type.name : ''"
-      :technologies="element.technologies"
-      :image= "element.cover"/>
+  <ProjectCard v-for="(element, index) in arrayProjects" 
+    :key="element.id"
+    :title="element.title"
+    :slug="element.slug"
+    :content="element.content"
+    :type="element.type ? element.type.name : ''"
+    :technologies="element.technologies"
+    :image= "element.cover"/>
+</div>
 
 
     <nav aria-label="Page navigation example">
