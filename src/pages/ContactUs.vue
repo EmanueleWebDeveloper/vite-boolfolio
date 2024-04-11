@@ -25,11 +25,9 @@ export default {
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h1>contatti</h1>
 
-            <ContactForm></ContactForm>
+          <ContactForm/>
         </div>
-
     </div>
 
 </div>

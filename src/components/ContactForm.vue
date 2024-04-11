@@ -1,55 +1,50 @@
 <script>
-import Axios from 'axios';
-import { store } from '../store';
+import axios from 'axios'
+
+import {store} from '../store.js'
 
 export default {
-  name: 'ContactForm',
-  components: {
-  
-  },
-  data() {
-    return {
-        store,
-        name: '',
-        email: '',
-        message: '',
-        errors: {},
-        success: false
-    }
-  },
-  methods: {
-    sendForm(){
+    name: 'ContactForm',
+    components: {
 
-        const data = {
-            name: this.name,
-            email: this.email,
-            message: this.message
+    },
+    data() {
+        return {
+            store,
+            name:'',
+            email:'',
+            message:'',
+            errors: {},
+            success: false
         }
-
-        this.errors = {};
-
-        Axios.post(`${this.store.apiBaseUrl}/api/contacts`, data)
-           .then( res => {
-
-            this.success = res.data.success;
-
-            if( !this.success){
-
-                this.errors = res.data.errors
-
-            } else{
-
-                this.name = ''
-                this.email = ''
-                this.message = ''
+    },
+    methods: {
+        sendForm(){
+            const data = {
+                name: this.name,
+                email: this.email,
+                message: this.message
             }
-           })
-    }
-  },
-  mounted() {
-  }
-}
 
+            this.errors={}
+
+            axios.post(`${this.store.apiBaseUrl}/api/contacts`, data)
+            .then( res => {
+                this.success = res.data.success
+                if(!this.success) {
+                    this.errors = res.data.errors
+                } else {
+                    this.name='',
+                    this.email='',
+                    this.message=''
+                }
+            })
+        }
+    },
+    mounted() {
+
+    }
+}
 </script>
 
 <template>
