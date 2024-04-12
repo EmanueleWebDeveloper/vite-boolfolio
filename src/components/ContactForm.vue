@@ -49,68 +49,38 @@ export default {
 
 <template>
 <div>
-    <h2> contact form</h2>
+        <h1 class="text-center mt-4">Contattami:</h1>
 
-    <div class="alert alert-succes" v-if="success" role="alert">
-    messaggio inviato correttamente
+        <div class="alert alert-success" v-if="success" role="alert">
+            Messaggio inviato correttamente
+        </div>
     </div>
 
-    <div class="" >
+    <div>
         <form @submit.prevent="sendForm()">
+            <div class="mb-3">
+                <input type="text" class="form-control" :class="{'is-invalid': errors?.name}" name="name" placeholder="Inserisci il tuo nome e cognome" v-model="name">
+                <p v-for="(error, index) in errors?.name" :key='`message-errors-${index}`' class="invalid-feedback"> {{ error }}</p>
+            </div>
 
-        <div class="mb-3">
-            <input 
-            type="text" 
-            class="form-control" 
-            :class="{'is-invalid': errors.name}"
-            name="name"
-            placeholder="inserisci il tuo nome"
-            v-model="name">
+            <div class="mb-3">
+                <input type="email" class="form-control" :class="{'is-invalid':errors?.email}" name="email" placeholder="Inserisci la tua e-mail" v-model="email">
+                <p v-for="(error, index) in errors?.email" :key='`message-errors-${index}`' class="invalid-feedback"> {{ error }}</p>
+            </div>
 
-            <p v-for="(error, index) in errors.name" :key='`message-errors-${index}`'
-            class="invalid-feedback">
-            {{ error }}
-            </p>
-        </div>
+            <div class="mb-3">
+                <textarea class="form-control" :enter-class="{'is-invalid':errors?.message}" name="message" id="message" cols="30" rows="10" v-model="message"></textarea>
+                <p v-for="(error, index) in errors?.message" :key='`message-errors-${index}`' class="invalid-feedback"> {{ error }}</p>
+            </div>
 
-        <div class="mb-3">
-            <input 
-            type="email" 
-            class="form-control" 
-            :class="{'is-invalid': errors.email}"
-            name="email"
-            placeholder="inserisci il tuo email"
-            v-model="email">
-
-            <p v-for="(error, index) in errors.email" :key='`message-errors-${index}`'
-            class="invalid-feedback">
-            {{ error }}
-            </p>
-        </div>
-
-        <div class="mb-3">
-            <textarea 
-            class="form-control" 
-            :class="{'is-invalid': errors.message}"
-            name="message" 
-            id="message" 
-            cols="30" 
-            rows="10"
-            v-model="message">
-            </textarea>
-
-            <p v-for="(error, index) in errors.message" :key='`message-errors-${index}`'
-            class="invalid-feedback">
-            {{ error }}
-            </p>
-        </div>
-
-        <button class="btn btn-primary" type="submit" >
-            send
-        </button>
+            
+            <div class="text-center">
+                <button class="btn btn-primary" type="submit">INVIA</button>
+            </div>
         </form>
     </div>
-</div>
 </template>
+
+
 
 <style scoped></style>

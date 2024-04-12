@@ -5,8 +5,8 @@
       <p>Sono Emanuele Luca Cali', un Web Developer appassionato e creativo.</p>
     </header>
     <section class="about-me">
-      <h2>Chi Sono</h2>
-      <p>Ciao! Sono un web developer che si occupa della creazione di siti web responsive e funzionali. Mi piace lavorare su progetti stimolanti e sfidanti, dando vita alle idee dei miei clienti attraverso il codice.</p>
+      <h2>HELLO WORLD</h2>
+      <p> Sono un web developer che si occupa della creazione di siti web responsive e funzionali. Mi piace lavorare su progetti stimolanti e sfidanti, dando vita alle idee dei miei clienti attraverso il codice.</p>
     </section>
     <section class="skills">
       <h2>Competenze</h2>
